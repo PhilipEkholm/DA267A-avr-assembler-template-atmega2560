@@ -1,14 +1,14 @@
 /*
  * delay.inc
- *	
+ *
  * Author: Philip Ekholm
  * Created: 2016-11-12
- */ 
+ */
 
 ;==============================================================================
 ; Delay of 1 µs (including RCALL)
 ;==============================================================================
-delay_1_micros:   /* UPPGIFT: komplettera med ett antal NOP-instruktioner!!! */
+delay_1_micros:
 	NOP
 	NOP
 	RET
@@ -17,7 +17,7 @@ delay_1_micros:   /* UPPGIFT: komplettera med ett antal NOP-instruktioner!!! */
 ; Delay of X µs
 ;	LDI + RCALL = 4 cycles
 ;==============================================================================
-delay_micros:   /* UPPGIFT: komplettera med ett antal NOP-instruktioner!!! */
+delay_micros:
 	DEC R24
 	NOP
 	NOP

@@ -25,6 +25,6 @@ clean:
 .PHONY: clean
 
 send:
-	avrdude -c arduino -p $(MMCU_SHORT) -P $(COM_PORT) -b 115200 -U flash:w:out/program.hex
+	avrdude -p $(MMCU_SHORT) -c stk500v2 -P $(COM_PORT) -b 115200 -F -U flash:w:out/program.hex
 
 .PHONY: send

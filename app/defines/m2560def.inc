@@ -2,7 +2,7 @@
 ;***** Created: 2011-02-09 12:03 ******* Source: ATmega2560.xml **********
 ;*************************************************************************
 ;* A P P L I C A T I O N   N O T E   F O R   T H E   A V R   F A M I L Y
-;* 
+;*
 ;* Number            : AVR000
 ;* File Name         : "m2560def.inc"
 ;* Title             : Register/Bit Definitions for the ATmega2560
@@ -10,27 +10,27 @@
 ;* Version           : 2.35
 ;* Support E-mail    : avr@atmel.com
 ;* Target MCU        : ATmega2560
-;* 
+;*
 ;* DESCRIPTION
-;* When including this file in the assembly program file, all I/O register 
+;* When including this file in the assembly program file, all I/O register
 ;* names and I/O register bit names appearing in the data book can be used.
-;* In addition, the six registers forming the three data pointers X, Y and 
-;* Z have been assigned names XL - ZH. Highest RAM address for Internal 
-;* SRAM is also defined 
-;* 
+;* In addition, the six registers forming the three data pointers X, Y and
+;* Z have been assigned names XL - ZH. Highest RAM address for Internal
+;* SRAM is also defined
+;*
 ;* The Register names are represented by their hexadecimal address.
-;* 
+;*
 ;* The Register Bit names are represented by their bit number (0-7).
-;* 
+;*
 ;* Please observe the difference in using the bit names with instructions
 ;* such as "sbr"/"cbr" (set/clear bit in register) and "sbrs"/"sbrc"
 ;* (skip if bit in register set/cleared). The following example illustrates
 ;* this:
-;* 
+;*
 ;* in    r16,PORTB             ;read PORTB latch
 ;* sbr   r16,(1<<PB6)+(1<<PB5) ;set PB6 and PB5 (use masks, not bit#)
 ;* out   PORTB,r16             ;output to PORTB
-;* 
+;*
 ;* in    r16,TIFR              ;read the Timer Interrupt Flag Register
 ;* sbrc  r16,TOV0              ;test the overflow flag (use bit#)
 ;* rjmp  TOV0_is_set           ;jump if set
@@ -328,30 +328,30 @@
 
 ; ***** TWI **************************
 ; TWAMR - TWI (Slave) Address Mask Register
-.equ	TWAM0	= 1	; 
+.equ	TWAM0	= 1	;
 .equ	TWAMR0	= TWAM0	; For compatibility
-.equ	TWAM1	= 2	; 
+.equ	TWAM1	= 2	;
 .equ	TWAMR1	= TWAM1	; For compatibility
-.equ	TWAM2	= 3	; 
+.equ	TWAM2	= 3	;
 .equ	TWAMR2	= TWAM2	; For compatibility
-.equ	TWAM3	= 4	; 
+.equ	TWAM3	= 4	;
 .equ	TWAMR3	= TWAM3	; For compatibility
-.equ	TWAM4	= 5	; 
+.equ	TWAM4	= 5	;
 .equ	TWAMR4	= TWAM4	; For compatibility
-.equ	TWAM5	= 6	; 
+.equ	TWAM5	= 6	;
 .equ	TWAMR5	= TWAM5	; For compatibility
-.equ	TWAM6	= 7	; 
+.equ	TWAM6	= 7	;
 .equ	TWAMR6	= TWAM6	; For compatibility
 
 ; TWBR - TWI Bit Rate register
-.equ	TWBR0	= 0	; 
-.equ	TWBR1	= 1	; 
-.equ	TWBR2	= 2	; 
-.equ	TWBR3	= 3	; 
-.equ	TWBR4	= 4	; 
-.equ	TWBR5	= 5	; 
-.equ	TWBR6	= 6	; 
-.equ	TWBR7	= 7	; 
+.equ	TWBR0	= 0	;
+.equ	TWBR1	= 1	;
+.equ	TWBR2	= 2	;
+.equ	TWBR3	= 3	;
+.equ	TWBR4	= 4	;
+.equ	TWBR5	= 5	;
+.equ	TWBR6	= 6	;
+.equ	TWBR7	= 7	;
 
 ; TWCR - TWI Control Register
 .equ	TWIE	= 0	; TWI Interrupt Enable
@@ -581,114 +581,114 @@
 
 ; ***** PORTE ************************
 ; PORTE - Data Register, Port E
-.equ	PORTE0	= 0	; 
+.equ	PORTE0	= 0	;
 .equ	PE0	= 0	; For compatibility
-.equ	PORTE1	= 1	; 
+.equ	PORTE1	= 1	;
 .equ	PE1	= 1	; For compatibility
-.equ	PORTE2	= 2	; 
+.equ	PORTE2	= 2	;
 .equ	PE2	= 2	; For compatibility
-.equ	PORTE3	= 3	; 
+.equ	PORTE3	= 3	;
 .equ	PE3	= 3	; For compatibility
-.equ	PORTE4	= 4	; 
+.equ	PORTE4	= 4	;
 .equ	PE4	= 4	; For compatibility
-.equ	PORTE5	= 5	; 
+.equ	PORTE5	= 5	;
 .equ	PE5	= 5	; For compatibility
-.equ	PORTE6	= 6	; 
+.equ	PORTE6	= 6	;
 .equ	PE6	= 6	; For compatibility
-.equ	PORTE7	= 7	; 
+.equ	PORTE7	= 7	;
 .equ	PE7	= 7	; For compatibility
 
 ; DDRE - Data Direction Register, Port E
-.equ	DDE0	= 0	; 
-.equ	DDE1	= 1	; 
-.equ	DDE2	= 2	; 
-.equ	DDE3	= 3	; 
-.equ	DDE4	= 4	; 
-.equ	DDE5	= 5	; 
-.equ	DDE6	= 6	; 
-.equ	DDE7	= 7	; 
+.equ	DDE0	= 0	;
+.equ	DDE1	= 1	;
+.equ	DDE2	= 2	;
+.equ	DDE3	= 3	;
+.equ	DDE4	= 4	;
+.equ	DDE5	= 5	;
+.equ	DDE6	= 6	;
+.equ	DDE7	= 7	;
 
 ; PINE - Input Pins, Port E
-.equ	PINE0	= 0	; 
-.equ	PINE1	= 1	; 
-.equ	PINE2	= 2	; 
-.equ	PINE3	= 3	; 
-.equ	PINE4	= 4	; 
-.equ	PINE5	= 5	; 
-.equ	PINE6	= 6	; 
-.equ	PINE7	= 7	; 
+.equ	PINE0	= 0	;
+.equ	PINE1	= 1	;
+.equ	PINE2	= 2	;
+.equ	PINE3	= 3	;
+.equ	PINE4	= 4	;
+.equ	PINE5	= 5	;
+.equ	PINE6	= 6	;
+.equ	PINE7	= 7	;
 
 
 ; ***** PORTF ************************
 ; PORTF - Data Register, Port F
-.equ	PORTF0	= 0	; 
+.equ	PORTF0	= 0	;
 .equ	PF0	= 0	; For compatibility
-.equ	PORTF1	= 1	; 
+.equ	PORTF1	= 1	;
 .equ	PF1	= 1	; For compatibility
-.equ	PORTF2	= 2	; 
+.equ	PORTF2	= 2	;
 .equ	PF2	= 2	; For compatibility
-.equ	PORTF3	= 3	; 
+.equ	PORTF3	= 3	;
 .equ	PF3	= 3	; For compatibility
-.equ	PORTF4	= 4	; 
+.equ	PORTF4	= 4	;
 .equ	PF4	= 4	; For compatibility
-.equ	PORTF5	= 5	; 
+.equ	PORTF5	= 5	;
 .equ	PF5	= 5	; For compatibility
-.equ	PORTF6	= 6	; 
+.equ	PORTF6	= 6	;
 .equ	PF6	= 6	; For compatibility
-.equ	PORTF7	= 7	; 
+.equ	PORTF7	= 7	;
 .equ	PF7	= 7	; For compatibility
 
 ; DDRF - Data Direction Register, Port F
-.equ	DDF0	= 0	; 
-.equ	DDF1	= 1	; 
-.equ	DDF2	= 2	; 
-.equ	DDF3	= 3	; 
-.equ	DDF4	= 4	; 
-.equ	DDF5	= 5	; 
-.equ	DDF6	= 6	; 
-.equ	DDF7	= 7	; 
+.equ	DDF0	= 0	;
+.equ	DDF1	= 1	;
+.equ	DDF2	= 2	;
+.equ	DDF3	= 3	;
+.equ	DDF4	= 4	;
+.equ	DDF5	= 5	;
+.equ	DDF6	= 6	;
+.equ	DDF7	= 7	;
 
 ; PINF - Input Pins, Port F
-.equ	PINF0	= 0	; 
-.equ	PINF1	= 1	; 
-.equ	PINF2	= 2	; 
-.equ	PINF3	= 3	; 
-.equ	PINF4	= 4	; 
-.equ	PINF5	= 5	; 
-.equ	PINF6	= 6	; 
-.equ	PINF7	= 7	; 
+.equ	PINF0	= 0	;
+.equ	PINF1	= 1	;
+.equ	PINF2	= 2	;
+.equ	PINF3	= 3	;
+.equ	PINF4	= 4	;
+.equ	PINF5	= 5	;
+.equ	PINF6	= 6	;
+.equ	PINF7	= 7	;
 
 
 ; ***** PORTG ************************
 ; PORTG - Data Register, Port G
-.equ	PORTG0	= 0	; 
+.equ	PORTG0	= 0	;
 .equ	PG0	= 0	; For compatibility
-.equ	PORTG1	= 1	; 
+.equ	PORTG1	= 1	;
 .equ	PG1	= 1	; For compatibility
-.equ	PORTG2	= 2	; 
+.equ	PORTG2	= 2	;
 .equ	PG2	= 2	; For compatibility
-.equ	PORTG3	= 3	; 
+.equ	PORTG3	= 3	;
 .equ	PG3	= 3	; For compatibility
-.equ	PORTG4	= 4	; 
+.equ	PORTG4	= 4	;
 .equ	PG4	= 4	; For compatibility
-.equ	PORTG5	= 5	; 
+.equ	PORTG5	= 5	;
 .equ	PG5	= 5	; For compatibility
 
 ; DDRG - Data Direction Register, Port G
-.equ	DDG0	= 0	; 
-.equ	DDG1	= 1	; 
-.equ	DDG2	= 2	; 
-.equ	DDG3	= 3	; 
-.equ	DDG4	= 4	; 
-.equ	DDG5	= 5	; 
+.equ	DDG0	= 0	;
+.equ	DDG1	= 1	;
+.equ	DDG2	= 2	;
+.equ	DDG3	= 3	;
+.equ	DDG4	= 4	;
+.equ	DDG5	= 5	;
 
 ; PING - Input Pins, Port G
-.equ	PING0	= 0	; 
-.equ	PING1	= 1	; 
-.equ	PING2	= 2	; 
-.equ	PING3	= 3	; 
-.equ	PING4	= 4	; 
-.equ	PING5	= 5	; 
+.equ	PING0	= 0	;
+.equ	PING1	= 1	;
+.equ	PING2	= 2	;
+.equ	PING3	= 3	;
+.equ	PING4	= 4	;
+.equ	PING5	= 5	;
 
 
 ; ***** PORTH ************************
@@ -874,39 +874,39 @@
 .equ	CS00	= 0	; Clock Select
 .equ	CS01	= 1	; Clock Select
 .equ	CS02	= 2	; Clock Select
-.equ	WGM02	= 3	; 
+.equ	WGM02	= 3	;
 .equ	FOC0B	= 6	; Force Output Compare B
 .equ	FOC0A	= 7	; Force Output Compare A
 
 ; TCNT0 - Timer/Counter0
-.equ	TCNT0_0	= 0	; 
-.equ	TCNT0_1	= 1	; 
-.equ	TCNT0_2	= 2	; 
-.equ	TCNT0_3	= 3	; 
-.equ	TCNT0_4	= 4	; 
-.equ	TCNT0_5	= 5	; 
-.equ	TCNT0_6	= 6	; 
-.equ	TCNT0_7	= 7	; 
+.equ	TCNT0_0	= 0	;
+.equ	TCNT0_1	= 1	;
+.equ	TCNT0_2	= 2	;
+.equ	TCNT0_3	= 3	;
+.equ	TCNT0_4	= 4	;
+.equ	TCNT0_5	= 5	;
+.equ	TCNT0_6	= 6	;
+.equ	TCNT0_7	= 7	;
 
 ; OCR0A - Timer/Counter0 Output Compare Register
-.equ	OCR0A_0	= 0	; 
-.equ	OCR0A_1	= 1	; 
-.equ	OCR0A_2	= 2	; 
-.equ	OCR0A_3	= 3	; 
-.equ	OCR0A_4	= 4	; 
-.equ	OCR0A_5	= 5	; 
-.equ	OCR0A_6	= 6	; 
-.equ	OCR0A_7	= 7	; 
+.equ	OCR0A_0	= 0	;
+.equ	OCR0A_1	= 1	;
+.equ	OCR0A_2	= 2	;
+.equ	OCR0A_3	= 3	;
+.equ	OCR0A_4	= 4	;
+.equ	OCR0A_5	= 5	;
+.equ	OCR0A_6	= 6	;
+.equ	OCR0A_7	= 7	;
 
 ; OCR0B - Timer/Counter0 Output Compare Register
-.equ	OCR0B_0	= 0	; 
-.equ	OCR0B_1	= 1	; 
-.equ	OCR0B_2	= 2	; 
-.equ	OCR0B_3	= 3	; 
-.equ	OCR0B_4	= 4	; 
-.equ	OCR0B_5	= 5	; 
-.equ	OCR0B_6	= 6	; 
-.equ	OCR0B_7	= 7	; 
+.equ	OCR0B_0	= 0	;
+.equ	OCR0B_1	= 1	;
+.equ	OCR0B_2	= 2	;
+.equ	OCR0B_3	= 3	;
+.equ	OCR0B_4	= 4	;
+.equ	OCR0B_5	= 5	;
+.equ	OCR0B_6	= 6	;
+.equ	OCR0B_7	= 7	;
 
 ; GTCCR - General Timer/Counter Control Register
 .equ	PSRSYNC	= 0	; Prescaler Reset Timer/Counter1 and Timer/Counter0
@@ -1426,12 +1426,12 @@
 .equ	CAL6	= 6	; Oscillator Calibration Value Bit6
 .equ	CAL7	= 7	; Oscillator Calibration Value Bit7
 
-; CLKPR - 
-.equ	CLKPS0	= 0	; 
-.equ	CLKPS1	= 1	; 
-.equ	CLKPS2	= 2	; 
-.equ	CLKPS3	= 3	; 
-.equ	CLKPCE	= 7	; 
+; CLKPR -
+.equ	CLKPS0	= 0	;
+.equ	CLKPS1	= 1	;
+.equ	CLKPS2	= 2	;
+.equ	CLKPS3	= 3	;
+.equ	CLKPCE	= 7	;
 
 ; SMCR - Sleep Mode Control Register
 .equ	SE	= 0	; Sleep Enable
@@ -1520,7 +1520,7 @@
 .equ	ADTS1	= 1	; ADC Auto Trigger Source bit 1
 .equ	ADTS2	= 2	; ADC Auto Trigger Source bit 2
 .equ	MUX5	= 3	; Analog Channel and Gain Selection Bits
-;.equ	ACME	= 6	; 
+;.equ	ACME	= 6	;
 
 ; ADCH - ADC Data Register High Byte
 .equ	ADCH0	= 0	; ADC Data Register High Byte Bit 0
@@ -1543,24 +1543,24 @@
 .equ	ADCL7	= 7	; ADC Data Register Low Byte Bit 7
 
 ; DIDR0 - Digital Input Disable Register
-.equ	ADC0D	= 0	; 
-.equ	ADC1D	= 1	; 
-.equ	ADC2D	= 2	; 
-.equ	ADC3D	= 3	; 
-.equ	ADC4D	= 4	; 
-.equ	ADC5D	= 5	; 
-.equ	ADC6D	= 6	; 
-.equ	ADC7D	= 7	; 
+.equ	ADC0D	= 0	;
+.equ	ADC1D	= 1	;
+.equ	ADC2D	= 2	;
+.equ	ADC3D	= 3	;
+.equ	ADC4D	= 4	;
+.equ	ADC5D	= 5	;
+.equ	ADC6D	= 6	;
+.equ	ADC7D	= 7	;
 
 ; DIDR2 - Digital Input Disable Register
-.equ	ADC8D	= 0	; 
-.equ	ADC9D	= 1	; 
-.equ	ADC10D	= 2	; 
-.equ	ADC11D	= 3	; 
-.equ	ADC12D	= 4	; 
-.equ	ADC13D	= 5	; 
-.equ	ADC14D	= 6	; 
-.equ	ADC15D	= 7	; 
+.equ	ADC8D	= 0	;
+.equ	ADC9D	= 1	;
+.equ	ADC10D	= 2	;
+.equ	ADC11D	= 3	;
+.equ	ADC12D	= 4	;
+.equ	ADC13D	= 5	;
+.equ	ADC14D	= 6	;
+.equ	ADC15D	= 7	;
 
 
 ; ***** BOOT_LOAD ********************

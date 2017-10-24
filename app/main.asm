@@ -3,13 +3,13 @@
  *
  * This is a very simple demo program made for the course DA215A at
  * Malmö University. The purpose of this program is:
- *	-	To test if a program can be transferred to the ATmega32U4
+ *	-	To test if a program can be transferred to the ATmega2560
  *		microcontroller.
- *	-	To provide a base for further programming in "Laboration 1".
+ *	-	To provide a base for further programming in "Laboration 4".
  *
  * After a successful transfer of the program, while the program is
  * running, the embedded LED on the Arduino board should be turned on.
- * The LED is connected to the D13 pin (PORTC, bit 7).
+ * The LED is connected to the D13 pin.
  *
  * Author:	Mathias Beckius
  *
@@ -51,7 +51,7 @@ init:
 ;==============================================================================
 init_pins:
 	LDI R16, 0xFF
-	OUT DDRC, R16
+	OUT DDRB, R16
 	RET
 
 ;==============================================================================
@@ -59,13 +59,13 @@ init_pins:
 ;==============================================================================
 main:
 	LDI R17, 0xFF
-	OUT PORTC, R17
-	LDI R24, 250
+	OUT PORTB, R17
+	LDI R24, 100
 	RCALL delay_ms
 
 	LDI R17, 0x00
-	OUT PORTC, R17
-	LDI R24, 250
+	OUT PORTB, R17
+	LDI R24, 100
 	RCALL delay_ms
 
 	RJMP main			; 2 cycles
