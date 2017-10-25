@@ -1,21 +1,3 @@
-/*
- * lab1.asm
- *
- * This is a very simple demo program made for the course DA215A at
- * Malmö University. The purpose of this program is:
- *	-	To test if a program can be transferred to the ATmega2560
- *		microcontroller.
- *	-	To provide a base for further programming in "Laboration 4".
- *
- * After a successful transfer of the program, while the program is
- * running, the embedded LED on the Arduino board should be turned on.
- * The LED is connected to the D13 pin.
- *
- * Author:	Mathias Beckius
- *
- * Date:	2014-11-05
- */
-
 ;==============================================================================
 ; Definitions of registers, etc. ("constants")
 ;==============================================================================
@@ -30,7 +12,8 @@
 	RJMP init
 
 	.ORG PM_START
-	.INCLUDE "defines/m2560def.inc"
+	.INCLUDE "defines/m2560def.inc" ;NOTE: Must be included in all Assembler-projects
+									;outside Atmel Studio
 	.INCLUDE "delay.inc"
 ;==============================================================================
 ; Basic initializations of stack pointer, I/O pins, etc.

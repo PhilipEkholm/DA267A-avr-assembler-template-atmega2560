@@ -18,8 +18,6 @@ make: $(TARGET)
 
 clean:
 	@echo 'Removing out folder'
-	@#@ for supressing echoing message in terminal
-	@#-rf to remove folder even if files already exists inside
 	@rm -rf out/
 
 .PHONY: clean

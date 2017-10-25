@@ -1,10 +1,3 @@
-/*
- * delay.inc
- *
- * Author: Philip Ekholm
- * Created: 2016-11-12
- */
-
 ;==============================================================================
 ; Delay of 1 µs (including RCALL)
 ;==============================================================================
@@ -53,20 +46,4 @@ loop_dms:
 	DEC R18
 	CPI R18, 0			; more loops to do?
 	BRNE loop_dms		;	continue!
-	RET
-
-;==============================================================================
-; Delay of 1s
-;	LDI + RCALL = 4 cycles
-;==============================================================================
-
-delay_1_s:
-	LDI R24, 250
-	RCALL delay_ms
-	LDI R24, 250
-	RCALL delay_ms
-	LDI R24, 250
-	RCALL delay_ms
-	LDI R24, 250
-	RCALL delay_ms
 	RET
